@@ -31,7 +31,7 @@ class Products extends Component {
               style={{ fontSize: "20px", padding: "15px" }}
             >
               {" "}
-              <i class="fas fa-sliders-h"></i> Hide Filters
+              <i className="fas fa-sliders-h"></i> Hide Filters
             </button>
           </div>
           <div className="col-lg-6 col-md-6  col-sm-6">
@@ -41,7 +41,7 @@ class Products extends Component {
           </div>
           <div className="col-lg-3  col-md-3  col-sm-3">
             <p className="" style={{ fontSize: "24px", padding: "15px" }}>
-              <i class="fas fa-sort-amount-up"></i> New Arrivals
+              <i className="fas fa-sort-amount-up"></i> New Arrivals
             </p>
           </div>
         </div>

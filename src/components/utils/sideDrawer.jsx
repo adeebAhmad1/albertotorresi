@@ -5,7 +5,7 @@ class sideDrawer extends Component {
     return (
       <div style={{display: this.props.show ? "block" : "none"}}>
         <ul>
-          <i class="fas fa-chevron-circle-down drop"></i>
+          <i className="fas fa-chevron-circle-down drop"></i>
           <b className="sideHead"> Category</b>
           <li>Boots</li>
           <li>Casual Shoes</li>
@@ -14,7 +14,7 @@ class sideDrawer extends Component {
         </ul>
         <hr />
         <ul>
-          <i class="fas fa-chevron-circle-down drop"></i>
+          <i className="fas fa-chevron-circle-down drop"></i>
           <b className="sideHead"> Color</b>
           <li>
             <button
@@ -79,7 +79,7 @@ class sideDrawer extends Component {
         </ul>
         <hr />
         <ul>
-          <i class="fas fa-chevron-circle-down drop"></i>
+          <i className="fas fa-chevron-circle-down drop"></i>
           <b className="sideHead"> Size</b>
           <br />
           <li
@@ -110,7 +110,7 @@ class sideDrawer extends Component {
         </ul>
         <hr />
         <ul>
-          <i class="fas fa-chevron-circle-down drop"></i>
+          <i className="fas fa-chevron-circle-down drop"></i>
           <b className="sideHead"> Price</b>
           <br />
           <input
@@ -122,7 +122,7 @@ class sideDrawer extends Component {
               padding: "5px",
             }}
             type="number"
-            value="2001"
+            defaultValue="2001"
           />
           <input
             className="inputs"
@@ -132,7 +132,7 @@ class sideDrawer extends Component {
               padding: "5px",
             }}
             type="number"
-            value="6000"
+            defaultValue="6000"
           />
           <li>
             <input type="range" min="$2000" max="$6000" />
@@ -140,7 +140,7 @@ class sideDrawer extends Component {
         </ul>
         <hr />
         <ul>
-          <i class="fas fa-chevron-circle-down drop"></i>
+          <i className="fas fa-chevron-circle-down drop"></i>
           <b className="sideHead"> Styles</b>
           <li>Boots</li>
           <li>Casual Shoes</li>
