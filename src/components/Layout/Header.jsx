@@ -4,6 +4,7 @@ import img2 from "../../resources/images/revised_menu_05_1x1.png29fd.jpg";
 import img3 from "../../resources/images/locator1b268.png";
 import logo_black from "../../resources/images/logo_black_145xc4e9.png";
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   componentDidMount(){
@@ -36,11 +37,12 @@ class Header extends Component {
   mouseLeave = (e) => e.target.classList.remove("is-expanded");
   toggleHidden = (id,type) => {
     const attr = document.getElementById(id).attributes;
-    if (attr[`aria-${type}`].value == "true") {
+    if (attr[`aria-${type}`].value === "true") {
       document.getElementById(id).setAttribute(`aria-${type}`, "false");
     } else {
       document.getElementById(id).setAttribute(`aria-${type}`, "true");
-    }}
+    }
+  }
   render() {
     return (
       <div>
@@ -55,7 +57,7 @@ class Header extends Component {
         <div className="Header__Wrapper">
           <div className="Header__FlexItem Header__FlexItem--fill">
             <button
-              onClick={()=> document.getElementById("sidebar-menu").setAttribute("aria-hidden","false")}
+              onClick={()=> this.toggleHidden("sidebar-menu","hidden")}
               className="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-desk"
               aria-expanded="false"
               data-action="open-drawer"
@@ -93,22 +95,22 @@ class Header extends Component {
             >
               <ul className="HorizontalList HorizontalList--spacingExtraLoose">
                 <li className="HorizontalList__Item">
-                  <a
-                    href="collections/new-arrivals.html"
+                  <Link
+                    to="collections/new-arrivals.html"
                     className="Heading u-h6"
                   >
                     New Arrivals
                     <span className="Header__LinkSpacer">New Arrivals</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="HorizontalList__Item ">
-                  <a
-                    href="collections/bestsellers.html"
+                  <Link
+                    to="collections/bestsellers.html"
                     className="Heading u-h6"
                   >
                     Best Sellers
                     <span className="Header__LinkSpacer">Best Sellers</span>
-                  </a>
+                  </Link>
                 </li>
                 <li
                   className="HorizontalList__Item "
@@ -124,250 +126,250 @@ class Header extends Component {
                       .setAttribute("aria-hidden", "true")
                   }
                 >
-                  <a href="#" className="Heading u-h6">
+                  <Link to="#" className="Heading u-h6">
                     COLLECTION
                     <span className="Header__LinkSpacer">COLLECTION</span>
-                  </a>
+                  </Link>
                   <div className="MegaMenu" aria-hidden="true">
                     <div className="MegaMenu__Inner">
                       <div className="MegaMenu__Item MegaMenu__Item--fit menu_item-1">
-                        <a
-                          href="collections/men.html"
+                        <Link
+                          to="collections/men.html"
                           className="MegaMenu__Title Heading Text--subdued u-h7"
                         >
                           MEN
-                        </a>
+                        </Link>
                         <ul className="Linklist inline">
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-boat-shoes.html"
+                            <Link
+                              to="collections/men-boat-shoes.html"
                               className="Link Link--secondary"
                             >
                               Boat Shoes
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-boots.html"
+                            <Link
+                              to="collections/men-boots.html"
                               className="Link Link--secondary"
                             >
                               Boots
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-brogue.html"
+                            <Link
+                              to="collections/men-brogue.html"
                               className="Link Link--secondary"
                             >
                               Brogues
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/derby.html"
+                            <Link
+                              to="collections/derby.html"
                               className="Link Link--secondary"
                             >
                               Derby
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/esphadrilles.html"
+                            <Link
+                              to="collections/esphadrilles.html"
                               className="Link Link--secondary"
                             >
                               Espadrilles
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-flyknit.html"
+                            <Link
+                              to="collections/men-flyknit.html"
                               className="Link Link--secondary"
                             >
                               Flyknit
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-lace-up.html"
+                            <Link
+                              to="collections/men-lace-up.html"
                               className="Link Link--secondary"
                             >
                               Lace Up
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-loafers.html"
+                            <Link
+                              to="collections/men-loafers.html"
                               className="Link Link--secondary"
                             >
                               Loafers
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                         <ul className="Linklist inline">
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-monk.html"
+                            <Link
+                              to="collections/men-monk.html"
                               className="Link Link--secondary"
                             >
                               Monk
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-oxford.html"
+                            <Link
+                              to="collections/men-oxford.html"
                               className="Link Link--secondary"
                             >
                               Oxford
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-sandal.html"
+                            <Link
+                              to="collections/men-sandal.html"
                               className="Link Link--secondary"
                             >
                               Sandals
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-slip-on.html"
+                            <Link
+                              to="collections/men-slip-on.html"
                               className="Link Link--secondary"
                             >
                               Slip Ons
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-slippers.html"
+                            <Link
+                              to="collections/men-slippers.html"
                               className="Link Link--secondary"
                             >
                               Slippers
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-sneakers.html"
+                            <Link
+                              to="collections/men-sneakers.html"
                               className="Link Link--secondary"
                             >
                               Sneakers
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men-tassel.html"
+                            <Link
+                              to="collections/men-tassel.html"
                               className="Link Link--secondary"
                             >
                               Tassels
-                            </a>
+                            </Link>
                           </li>
 
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/men.html"
+                            <Link
+                              to="collections/men.html"
                               className="Link Link--secondary"
                             >
                               Shop All{" "}
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="MegaMenu__Item MegaMenu__Item--fit menu_item-2">
-                        <a
-                          href="collections/women.html"
+                        <Link
+                          to="collections/women.html"
                           className="MegaMenu__Title Heading Text--subdued u-h7"
                         >
                           WOMEN
-                        </a>
+                        </Link>
                         <ul className="Linklist">
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/women-boots.html"
+                            <Link
+                              to="collections/women-boots.html"
                               className="Link Link--secondary"
                             >
                               Boots
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/women.html"
+                            <Link
+                              to="collections/women.html"
                               className="Link Link--secondary"
                             >
                               Shop All
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="MegaMenu__Item MegaMenu__Item--fit menu_item-3">
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           className="MegaMenu__Title Heading Text--subdued u-h7"
                         >
                           Categories
-                        </a>
+                        </Link>
                         <ul className="Linklist">
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/formal-shoes.html"
+                            <Link
+                              to="collections/formal-shoes.html"
                               className="Link Link--secondary"
                             >
                               Formal Shoes
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/casual-shoes.html"
+                            <Link
+                              to="collections/casual-shoes.html"
                               className="Link Link--secondary"
                             >
                               Casual Shoes
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/boots.html"
+                            <Link
+                              to="collections/boots.html"
                               className="Link Link--secondary"
                             >
                               Boots
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/sandal-slippers.html"
+                            <Link
+                              to="collections/sandal-slippers.html"
                               className="Link Link--secondary"
                             >
                               Sandal &amp; Slippers
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="MegaMenu__Item MegaMenu__Item--fit menu_item-4">
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           className="MegaMenu__Title Heading Text--subdued u-h7"
                         >
                           Collection
-                        </a>
+                        </Link>
                         <ul className="Linklist">
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/exclusive-collection-1.html"
+                            <Link
+                              to="collections/exclusive-collection-1.html"
                               className="Link Link--secondary"
                             >
                               Exclusive Collection
-                            </a>
+                            </Link>
                           </li>
                           <li className="Linklist__Item">
-                            <a
-                              href="collections/flyknit-collection.html"
+                            <Link
+                              to="collections/flyknit-collection.html"
                               className="Link Link--secondary"
                             >
                               Flyknit Collection
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -376,9 +378,9 @@ class Header extends Component {
                         style={{ width: "660px", minWidth: "425px" }}
                       >
                         <div className="MegaMenu__Push MegaMenu__Push--shrink">
-                          <a
+                          <Link
                             className="MegaMenu__PushLink"
-                            href="collections/men.html"
+                            to="collections/men.html"
                           >
                             <div
                               className="MegaMenu__PushImageWrapper AspectRatio"
@@ -396,12 +398,12 @@ class Header extends Component {
 
                               <span className="Image__Loader"></span>
                             </div>
-                          </a>
+                          </Link>
                         </div>
                         <div className="MegaMenu__Push MegaMenu__Push--shrink">
-                          <a
+                          <Link
                             className="MegaMenu__PushLink"
-                            href="collections/women.html"
+                            to="collections/women.html"
                           >
                             <div
                               className="MegaMenu__PushImageWrapper AspectRatio"
@@ -418,7 +420,7 @@ class Header extends Component {
                               />
                               <span className="Image__Loader"></span>
                             </div>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -438,50 +440,50 @@ class Header extends Component {
                       .setAttribute("aria-hidden", "true")
                   }
                 >
-                  <a href="collections/offers.html" className="Heading u-h6">
+                  <Link to="collections/offers.html" className="Heading u-h6">
                     Offers
-                  </a>
+                  </Link>
                   <div className="DropdownMenu" aria-hidden="true">
                     <ul className="Linklist">
                       <li className="Linklist__Item">
-                        <a
-                          href="collections/offers-inr-1699.html"
+                        <Link
+                          to="collections/offers-inr-1699.html"
                           className="Link Link--secondary"
                         >
                           Flat @ INR 1699{" "}
-                        </a>
+                        </Link>
                       </li>
                       <li className="Linklist__Item">
-                        <a
-                          href="collections/flat-inr-1899.html"
+                        <Link
+                          to="collections/flat-inr-1899.html"
                           className="Link Link--secondary"
                         >
                           Flat @ INR 1899{" "}
-                        </a>
+                        </Link>
                       </li>
                       <li className="Linklist__Item">
-                        <a
-                          href="collections/flat-2199.html"
+                        <Link
+                          to="collections/flat-2199.html"
                           className="Link Link--secondary"
                         >
                           Flat @ INR 2199{" "}
-                        </a>
+                        </Link>
                       </li>
                       <li className="Linklist__Item">
-                        <a
-                          href="collections/flat-inr-2399.html"
+                        <Link
+                          to="collections/flat-inr-2399.html"
                           className="Link Link--secondary"
                         >
                           Flat @ INR 2399{" "}
-                        </a>
+                        </Link>
                       </li>
                       <li className="Linklist__Item">
-                        <a
-                          href="collections/steal-a-deal.html"
+                        <Link
+                          to="collections/steal-a-deal.html"
                           className="Link Link--secondary"
                         >
                           Steal a Deal{" "}
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -491,20 +493,20 @@ class Header extends Component {
           </div>
           <div className="Header__FlexItem Header__FlexItem--logo">
             <h1 className="Header__Logo">
-              <a href="index.html" className="Header__LogoLink">
+              <Link to="index.html" className="Header__LogoLink">
                 <img
                   className="Header__LogoImage Header__LogoImage--primary"
                   src={logo_black}
                   width="145"
                   alt="Alberto Torresi"
                 />
-              </a>
+              </Link>
             </h1>
           </div>
 
           <div className="Header__FlexItem Header__FlexItem--fill">
-            <a
-              href="account/login.html"
+            <Link
+              to="account/login.html"
               className="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone"
             >
               <svg
@@ -524,20 +526,20 @@ class Header extends Component {
                   <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
                 </g>
               </svg>
-            </a>
+            </Link>
 
-            <a
-              href="pages/store-locator.html"
+            <Link
+              to="pages/store-locator.html"
               className="Header__Icon Icon-Wrapper Icon-Wrapper--clickable "
               aria-label="Search"
             >
               <span className="locator">
                 <img src={img3} width={35} />
               </span>
-            </a>
+            </Link>
 
-            <a
-              href="search.html"
+            <Link
+              to="search.html"
               className="Header__Icon Icon-Wrapper Icon-Wrapper--clickable "
               data-action="toggle-search"
               aria-label="Search"
@@ -579,10 +581,10 @@ class Header extends Component {
                   </g>
                 </svg>
               </span>
-            </a>
+            </Link>
 
-            <a
-              href="cart.html"
+            <Link
+              to="cart.html"
               className="Header__Icon Icon-Wrapper Icon-Wrapper--clickable "
               data-action="open-drawer"
               data-drawer-id="sidebar-cart"
@@ -614,7 +616,7 @@ class Header extends Component {
                 </svg>
               </span>
               <span className="Header__CartDot "></span>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -656,20 +658,20 @@ class Header extends Component {
                 aria-label="Sidebar navigation"
               >
                 <div className="Collapsible">
-                  <a
-                    href="collections/new-arrivals.html"
+                  <Link
+                    to="collections/new-arrivals.html"
                     className="Collapsible__Button Heading Link Link--primary u-h6"
                   >
                     New Arrivals
-                  </a>
+                  </Link>
                 </div>
                 <div className="Collapsible">
-                  <a
-                    href="collections/bestsellers.html"
+                  <Link
+                    to="collections/bestsellers.html"
                     className="Collapsible__Button Heading Link Link--primary u-h6"
                   >
                     Best Sellers
-                  </a>
+                  </Link>
                 </div>
                 <div className="Collapsible">
                   <button
@@ -701,132 +703,132 @@ class Header extends Component {
                           <div className="Collapsible__Content">
                             <ul className="Linklist Linklist--bordered Linklist--spacingLoose">
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-boat-shoes.html"
+                                <Link
+                                  to="collections/men-boat-shoes.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Boat Shoes
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-boots.html"
+                                <Link
+                                  to="collections/men-boots.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Boots
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-brogue.html"
+                                <Link
+                                  to="collections/men-brogue.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Brogues
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/derby.html"
+                                <Link
+                                  to="collections/derby.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Derby
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/esphadrilles.html"
+                                <Link
+                                  to="collections/esphadrilles.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Espadrilles
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-flyknit.html"
+                                <Link
+                                  to="collections/men-flyknit.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Flyknit
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-lace-up.html"
+                                <Link
+                                  to="collections/men-lace-up.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Lace Up
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-loafers.html"
+                                <Link
+                                  to="collections/men-loafers.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Loafers
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-monk.html"
+                                <Link
+                                  to="collections/men-monk.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Monk
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-oxford.html"
+                                <Link
+                                  to="collections/men-oxford.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Oxford
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-sandal.html"
+                                <Link
+                                  to="collections/men-sandal.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Sandals
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-slip-on.html"
+                                <Link
+                                  to="collections/men-slip-on.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Slip Ons
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-slippers.html"
+                                <Link
+                                  to="collections/men-slippers.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Slippers
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-sneakers.html"
+                                <Link
+                                  to="collections/men-sneakers.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Sneakers
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men-tassel.html"
+                                <Link
+                                  to="collections/men-tassel.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Tassels
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/men.html"
+                                <Link
+                                  to="collections/men.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Shop All{" "}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -848,20 +850,20 @@ class Header extends Component {
                           <div className="Collapsible__Content">
                             <ul className="Linklist Linklist--bordered Linklist--spacingLoose">
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/women-boots.html"
+                                <Link
+                                  to="collections/women-boots.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Boots
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/women.html"
+                                <Link
+                                  to="collections/women.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Shop All
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -883,36 +885,36 @@ class Header extends Component {
                           <div className="Collapsible__Content">
                             <ul className="Linklist Linklist--bordered Linklist--spacingLoose">
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/formal-shoes.html"
+                                <Link
+                                  to="collections/formal-shoes.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Formal Shoes
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/casual-shoes.html"
+                                <Link
+                                  to="collections/casual-shoes.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Casual Shoes
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/boots.html"
+                                <Link
+                                  to="collections/boots.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Boots
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/sandal-slippers.html"
+                                <Link
+                                  to="collections/sandal-slippers.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Sandal &amp; Slippers
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -934,20 +936,20 @@ class Header extends Component {
                           <div className="Collapsible__Content">
                             <ul className="Linklist Linklist--bordered Linklist--spacingLoose">
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/exclusive-collection-1.html"
+                                <Link
+                                  to="collections/exclusive-collection-1.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Exclusive Collection
-                                </a>
+                                </Link>
                               </li>
                               <li className="Linklist__Item">
-                                <a
-                                  href="collections/flyknit-collection.html"
+                                <Link
+                                  to="collections/flyknit-collection.html"
                                   className="Text--subdued Link Link--primary"
                                 >
                                   Flyknit Collection
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -970,44 +972,44 @@ class Header extends Component {
                   <div className="Collapsible__Inner" ref="menu6">
                     <div className="Collapsible__Content">
                       <div className="Collapsible">
-                        <a
-                          href="collections/offers-inr-1699.html"
+                        <Link
+                          to="collections/offers-inr-1699.html"
                           className="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
                         >
                           Flat @ INR 1699
-                        </a>
+                        </Link>
                       </div>
                       <div className="Collapsible">
-                        <a
-                          href="collections/flat-inr-1899.html"
+                        <Link
+                          to="collections/flat-inr-1899.html"
                           className="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
                         >
                           Flat @ INR 1899
-                        </a>
+                        </Link>
                       </div>
                       <div className="Collapsible">
-                        <a
-                          href="collections/flat-2199.html"
+                        <Link
+                          to="collections/flat-2199.html"
                           className="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
                         >
                           Flat @ INR 2199
-                        </a>
+                        </Link>
                       </div>
                       <div className="Collapsible">
-                        <a
-                          href="collections/flat-inr-2399.html"
+                        <Link
+                          to="collections/flat-inr-2399.html"
                           className="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
                         >
                           Flat @ INR 2399
-                        </a>
+                        </Link>
                       </div>
                       <div className="Collapsible">
-                        <a
-                          href="collections/steal-a-deal.html"
+                        <Link
+                          to="collections/steal-a-deal.html"
                           className="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
                         >
                           Steal a Deal{" "}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1019,12 +1021,12 @@ class Header extends Component {
               >
                 <ul className="Linklist Linklist--spacingLoose">
                   <li className="Linklist__Item">
-                    <a
-                      href="account/login.html"
+                    <Link
+                      to="account/login.html"
                       className="Text--subdued Link Link--primary"
                     >
                       Account
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -1033,8 +1035,8 @@ class Header extends Component {
           <aside className="Drawer__Footer" data-drawer-animated-bottom>
             <ul className="SidebarMenu__Social HorizontalList HorizontalList--spacingFill">
               <li className="HorizontalList__Item">
-                <a
-                  href="https://www.facebook.com/AlbertoTorresiShoes"
+                <Link
+                  to="https://www.facebook.com/AlbertoTorresiShoes"
                   className="Link Link--primary"
                   target="_blank"
                   rel="noopener"
@@ -1045,12 +1047,12 @@ class Header extends Component {
                       <path d="M5.842 17V9.246h2.653l.398-3.023h-3.05v-1.93c0-.874.246-1.47 1.526-1.47H9V.118C8.718.082 7.75 0 6.623 0 4.27 0 2.66 1.408 2.66 3.994v2.23H0v3.022h2.66V17h3.182z"></path>
                     </svg>
                   </span>
-                </a>
+                </Link>
               </li>
 
               <li className="HorizontalList__Item">
-                <a
-                  href="https://twitter.com/AlbertoTorresiS"
+                <Link
+                  to="https://twitter.com/AlbertoTorresiS"
                   className="Link Link--primary"
                   target="_blank"
                   rel="noopener"
@@ -1065,12 +1067,12 @@ class Header extends Component {
                       <path d="M32 3.077c-1.1748.525-2.4433.8748-3.768 1.031 1.356-.8123 2.3932-2.0995 2.887-3.6305-1.2686.7498-2.6746 1.2997-4.168 1.5934C25.751.796 24.045.0025 22.158.0025c-3.6242 0-6.561 2.937-6.561 6.5612 0 .5124.0562 1.0123.1686 1.4935C10.3104 7.7822 5.474 5.1702 2.237 1.196c-.5624.9687-.8873 2.0997-.8873 3.2994 0 2.2746 1.156 4.2867 2.9182 5.4615-1.075-.0314-2.0872-.3313-2.9745-.8187v.0812c0 3.1806 2.262 5.8363 5.2677 6.4362-.55.15-1.131.2312-1.731.2312-.4248 0-.831-.0438-1.2372-.1188.8374 2.6057 3.262 4.5054 6.13 4.5616-2.2495 1.7622-5.074 2.812-8.1546 2.812-.531 0-1.0498-.0313-1.5684-.0938 2.912 1.8684 6.3613 2.9494 10.0668 2.9494 12.0726 0 18.6776-10.0043 18.6776-18.6776 0-.2874-.0063-.5686-.0188-.8498C30.0066 5.5514 31.119 4.3954 32 3.077z"></path>
                     </svg>
                   </span>
-                </a>
+                </Link>
               </li>
 
               <li className="HorizontalList__Item">
-                <a
-                  href="https://www.instagram.com/albertotorresi"
+                <Link
+                  to="https://www.instagram.com/albertotorresi"
                   className="Link Link--primary"
                   target="_blank"
                   rel="noopener"
@@ -1085,7 +1087,7 @@ class Header extends Component {
                       <path d="M15.994 2.886c4.273 0 4.775.019 6.464.095 1.562.07 2.406.33 2.971.552.749.292 1.283.635 1.841 1.194s.908 1.092 1.194 1.841c.216.565.483 1.41.552 2.971.076 1.689.095 2.19.095 6.464s-.019 4.775-.095 6.464c-.07 1.562-.33 2.406-.552 2.971-.292.749-.635 1.283-1.194 1.841s-1.092.908-1.841 1.194c-.565.216-1.41.483-2.971.552-1.689.076-2.19.095-6.464.095s-4.775-.019-6.464-.095c-1.562-.07-2.406-.33-2.971-.552-.749-.292-1.283-.635-1.841-1.194s-.908-1.092-1.194-1.841c-.216-.565-.483-1.41-.552-2.971-.076-1.689-.095-2.19-.095-6.464s.019-4.775.095-6.464c.07-1.562.33-2.406.552-2.971.292-.749.635-1.283 1.194-1.841s1.092-.908 1.841-1.194c.565-.216 1.41-.483 2.971-.552 1.689-.083 2.19-.095 6.464-.095zm0-2.883c-4.343 0-4.889.019-6.597.095-1.702.076-2.864.349-3.879.743-1.054.406-1.943.959-2.832 1.848S1.251 4.473.838 5.521C.444 6.537.171 7.699.095 9.407.019 11.109 0 11.655 0 15.997s.019 4.889.095 6.597c.076 1.702.349 2.864.743 3.886.406 1.054.959 1.943 1.848 2.832s1.784 1.435 2.832 1.848c1.016.394 2.178.667 3.886.743s2.248.095 6.597.095 4.889-.019 6.597-.095c1.702-.076 2.864-.349 3.886-.743 1.054-.406 1.943-.959 2.832-1.848s1.435-1.784 1.848-2.832c.394-1.016.667-2.178.743-3.886s.095-2.248.095-6.597-.019-4.889-.095-6.597c-.076-1.702-.349-2.864-.743-3.886-.406-1.054-.959-1.943-1.848-2.832S27.532 1.247 26.484.834C25.468.44 24.306.167 22.598.091c-1.714-.07-2.26-.089-6.603-.089zm0 7.778c-4.533 0-8.216 3.676-8.216 8.216s3.683 8.216 8.216 8.216 8.216-3.683 8.216-8.216-3.683-8.216-8.216-8.216zm0 13.549c-2.946 0-5.333-2.387-5.333-5.333s2.387-5.333 5.333-5.333 5.333 2.387 5.333 5.333-2.387 5.333-5.333 5.333zM26.451 7.457c0 1.059-.858 1.917-1.917 1.917s-1.917-.858-1.917-1.917c0-1.059.858-1.917 1.917-1.917s1.917.858 1.917 1.917z"></path>
                     </svg>
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
           </aside>

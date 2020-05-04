@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import Card from '../utils/Card';
 
-const Products = () => {
+const Products = ({active}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -13,8 +13,15 @@ const Products = () => {
     // arrows: false,
     autoplaySpeed: 110000
   };
+  const genders = ["Men","Women"]
+  const showBtns = ()=>{
+    return genders.map((el,i)=> <button className={`btn_products ${el=== active ? "active" : ""}`} key={i}>{el}</button>)
+  }
   return (
     <section className="ProductListWrapper">
+      <div className="gender_btn_wrapper">
+        {showBtns()}
+      </div>
       <Slider className="slider" {...settings}>
         <Card />
         <Card />

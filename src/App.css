@@ -91,6 +91,11 @@ input[type="search"]::-webkit-search-decoration {
     display: none !important;
   }
 }
+@media screen and (max-width: 640px) {
+  .hidden-phone {
+    display: none !important;
+  }
+}
 @media screen and (min-width: 641px) {
   .hidden-tablet-and-up {
     display: none !important;
@@ -145,7 +150,6 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #1c1b1b;
-  background: #efefef;
   line-height: 1.65;
 }
 .Link,
@@ -1755,6 +1759,73 @@ body {
   .flex_footer a{
     display: block !important;
   }
+  .shoe_section{
+    display: block !important;
+  }
+  .carousel_item{
+    height: 60vh !important;
+  }
+  .play_icon{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 0 !important;
+  }
+  .cleb_review{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cleb_review > *{
+    position: static !important;
+    height: 80%;
+    transform: translateY(0) !important;
+  }
+  .content_box{
+    width: 70% !important;
+    position: relative !important;
+    left: 0 !important;
+    margin: 0 auto;
+  }
+  .content_box h2::after{
+    right: 0px !important;
+    left: auto !important;
+  }
+  .celeb_card_wrapper{
+    display: block;
+    margin: 0 auto;
+    width: 70% !important;
+  }
+  .img_outer{
+    width: 70% !important;
+  }
+}
+.background_wrapper{
+  background-image: url("https://cdn.shopify.com/s/files/1/0753/2615/files/about-us_1500x.jpg?v=1570257486");
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;align-items: center;
+  color: #fff;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+}
+.container_inner{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.play_icon{
+  width: 500px;
+  font-size: 5rem;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+.background_wrapper h5{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.background_wrapper p{
+  font-size: 1.2rem;
 }
 .gender_wrapper {
   display: flex;
@@ -1798,6 +1869,11 @@ body {
 .slider {
   margin: 0 auto;
   width: 90%;
+}
+button{
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 .card {
   margin: 10px;
@@ -1908,4 +1984,142 @@ body {
 .flex_footer a{
   margin: 10px;
   flex-grow: 1;
+}
+.button{
+  width: 150px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  background: none;
+  border-radius: 100rem;
+  border: 2px solid var(--color);
+  color: var(--color);
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: all 0.4s;
+}
+.detail_wrapper{
+  height: 90vh;
+  background-image: url(https://cdn.shopify.com/s/files/1/0753/2615/files/at_49bfeb02-f316-4282-8d7b-3913d8f9f9cb.jpg?4592);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.cheering_text,.shoe_type,.btn_wrapper{
+  width: 100%;
+  text-align: center;
+}
+.content{
+  display: block;
+  margin-bottom: 100px;
+}
+.shoe_type{
+  font-size: 2.2rem;
+}
+.btn_wrapper{
+  margin-top: 20px;
+}
+.cheering_text{
+  font-size: 2rem;
+  font-family: Satisfy;
+}
+.shoe_section{
+  display: flex;
+}
+.button:hover{
+  background-color: var(--color);
+  color: #999;
+}
+
+.carousel_slider{
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.carousel_slider .slick-arrow{
+  display: block;
+  width: 35px !important;
+  height: 100%;
+  background: #000;
+  z-index: 10000000;
+}
+.carousel_slider .slick-arrow::before{
+  color: #fff !important;
+  font-size: 2rem;
+}
+section{
+  margin: 30px 0;
+}
+
+.gender_btn_wrapper{
+  margin:  0 auto;
+  text-align: center;
+  font-family: Satisfy;
+  font-size: 2.5rem;
+}
+.btn_products{
+  padding: 0 50px;
+  display: inline-block;
+}
+.gender_btn_wrapper button:not(:last-child){
+  border-right: 2px solid #444;
+}
+.ProductListWrapper{
+  margin: 0 auto;
+}
+.btn_products.active{
+  text-decoration: underline;
+}
+
+.content_box{
+  width: 270px;
+  /* background-color: #fff; */
+  padding: 20px;
+  background: #efefef;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cleb_review{
+  position: relative;
+}
+.content_box h2{
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+.content_box p{
+  text-align: justify;
+}
+.celeb_card_wrapper{
+  width: 20%;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+.img_outer{
+  width: 40vw;
+  margin: 0 auto;
+}
+.content_box h2::after{
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  transform: translateY(-75%);
+  width: 30%;
+  height: 2px;
+  background-color: #000;
+}
+
+.celebrities .carousel_slider .slick-arrow{
+  height: 40px;
 }
