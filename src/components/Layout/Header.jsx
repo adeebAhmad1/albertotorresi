@@ -126,9 +126,9 @@ class Header extends Component {
                       .setAttribute("aria-hidden", "true")
                   }
                 >
-                  <Link to="#" className="Heading u-h6">
-                    COLLECTION
-                    <span className="Header__LinkSpacer">COLLECTION</span>
+                  <Link to="/products" className="Heading u-h6">
+                  Products
+                    <span className="Header__LinkSpacer">Products</span>
                   </Link>
                   <div className="MegaMenu" aria-hidden="true">
                     <div className="MegaMenu__Inner">

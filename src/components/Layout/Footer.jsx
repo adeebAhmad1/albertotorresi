@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
+import logo from '../../resources/images/logo (2).png'
 class Footer extends Component {
   render() {
     return (
@@ -26,7 +26,7 @@ class Footer extends Component {
             <div className="container">
               <img
                 className="logo_img center"
-                src="https://cdn.britannica.com/20/193920-050-DF5ABB8A/circle-A-symbol.jpg"
+                src={logo}
                 alt="logo"
               />
               <p className="mb-3 mt-2">
