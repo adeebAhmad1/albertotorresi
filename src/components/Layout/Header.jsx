@@ -506,8 +506,9 @@ class Header extends Component {
 
           <div className="Header__FlexItem Header__FlexItem--fill">
             <Link
-              to="account/login.html"
+              to="/"
               className="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone"
+              onClick={()=>document.querySelector("#login").dataset.hidden = "false"}
             >
               <svg
                 className="Icon Icon--account"

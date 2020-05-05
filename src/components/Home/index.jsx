@@ -8,7 +8,7 @@ import Celebrities from './Celebrities';
 import Reviews from './Reviews';
 import Blog from './Blog';
 import Feature from './Feature';
-
+import Artisan from './Artisans';
 const Home = () => {
   return (
     <div>
@@ -19,6 +19,7 @@ const Home = () => {
       <LifeStyle />
       <Products active="Women" />
       <ShoeTypes />
+      <Artisan/>
       <Celebrities/>
       <Reviews />
       <Blog />
