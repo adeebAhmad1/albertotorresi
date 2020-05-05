@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Product from "./components/Products";
 import Footer from "./components/Layout/Footer";
 import Login from "./components/Login";
+import Checkout from "./components/Checkout";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Login />
         <Route component={Home} exact path="/" />
         <Route component={Product} exact path="/products" />
+        <Route component={Checkout} exact path="/checkout" />
         <Footer />
       </div>
     </BrowserRouter>

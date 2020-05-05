@@ -2422,6 +2422,9 @@ margin-left: 20px;
   font-size: 2rem;
   font-family: Satisfy;
 }
+.input{
+  width: 100%;
+}
 
 .popup_outer{
   position: fixed;
