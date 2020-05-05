@@ -9,10 +9,12 @@ import Reviews from './Reviews';
 import Blog from './Blog';
 import Feature from './Feature';
 import Artisan from './Artisans';
+import Quality from './Quality';
 const Home = () => {
   return (
     <div>
       <Genders />
+      <Quality />
       <Products active="Men" />
       <ShoeTypes />
       <Carousel />
